@@ -6,14 +6,13 @@ module.exports = {
       fontFamily: {
         sans: ["KalamehWeb"],
       },
-    },
-    colors: {
-      "english-violet": "#473948ff",
-      "old-rose": "#B17D7Aff",
-      "eggplant": " #59434Cff",
-      "mountbatten-pink": "#8A6876ff",
-      "english-violet-2": "rgba(72, 71, 102,0.6)",
+      colors: {
+        "english-violet": "#473948ff",
+        "old-rose": "#B17D7Aff",
+        "mountbatten-pink": "#8A6876ff",
+        "english-violet-2": "rgba(72, 71, 102,0.6)",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss"), require("autoprefixer")],
 };

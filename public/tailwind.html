@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="ltr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./build/tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>mini pouya</title>
   </head>
   <body
@@ -14,15 +21,87 @@
     "
   >
     <div class="flex flex-col items-center justify-start">
+      <!-- login header -->
       <div class="bg-english-violet-2 p-2 w-full">
         <h1 class="font-semibold text-center text-xl">هلدینگ پویاگران</h1>
       </div>
-
+      <!-- login section -->
       <div
-        class="w-[30rem] h-96 bg-english-violet-2 rounded-xl shadow-lg mt-24"
+        class="z-0 relative flex flex-col justify-around items-center w-[25rem] h-96 bg-english-violet-2 rounded-xl shadow-lg mt-24"
       >
-        <h1>jery</h1>
+        <!-- login icon & titr -->
+        <div class="flex flex-col items-center">
+          <i class="z-10 -top-10 absolute fa-solid fa-circle-user fa-6x"></i>
+          <div
+            class="z-[9] -top-12 absolute rounded-full bg-gray-200 w-28 h-28"
+          ></div>
+          <h2 class="font-bold text-2xl pt-20 pb-3">Log In</h2>
+        </div>
+        <!-- inputs -->
+        <form class="flex flex-col items-center justify-around" action="">
+          <!-- username input -->
+          <div class="pb-4 relative">
+            <label class="ml-2 block text-lg font-medium" for="user name"
+              >username</label
+            >
+            <i class="absolute bottom-8 left-3 fa-solid fa-user"> |</i>
+            <input
+              class="pl-9 placeholder:text-sm w-80 focus:outline-indigo-900 bg-gray-100 p-2 rounded-lg border-2 border-gray-500"
+              type="text"
+              id="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+          <!-- password input -->
+
+          <div class="pb-4 relative">
+            <label class="ml-2 block text-lg font-medium" for="user name"
+              >password</label
+            >
+            <i class="absolute bottom-8 left-3 fa-solid fa-lock"> |</i>
+            <i
+              onclick="myFunction(this)"
+              id="eyeicon"
+              class="absolute bottom-8 right-3 cursor-pointer fa-solid fa-eye-slash"
+            ></i>
+
+            <input
+              class="pl-9 placeholder:text-sm w-80 focus:outline-indigo-900 bg-gray-100 p-2 rounded-lg border-2 border-gray-500"
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <!-- button submit -->
+          <div class="p-7">
+            <button
+              class="text-xl text-center font-normal rounded-lg text-white bg-slate-900 pr-5 pl-5 pt-2 pb-2"
+              type="submit"
+            >
+              Log In
+            </button>
+          </div>
+        </form>
       </div>
     </div>
+    <script>
+      let eyeicon = document.getElementById("eyeicon");
+      let password = document.getElementById("password");
+      // chenge eyeicon on click
+      eyeicon.addEventListener("click", function (e) {
+        // toggle the type attribute
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        // toggle the eye slash icon
+        if ("type" === "password") this.classList.toggle("fa-eye-slash");
+        else {
+          this.classList.toggle("fa-eye");
+        }
+      });
+    </script>
   </body>
 </html>
