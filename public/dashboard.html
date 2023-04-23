@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./build/tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>mini pouya dashboard</title>
+  </head>
+  <body class="bg-violet-200">
+    <!-- dashboard -->
+    <div class="flex flex-col">
+      <!-- dashboard header -->
+      <div class="flex flex-row-reverse items-start justify-between m-5">
+        <!-- profile col -->
+        <div class="flex flex-col">
+          <!-- pofile card -->
+          <div
+            class="bg-white ml-4 w-80 h-64 rounded-2xl flex-col justify-start items-center"
+          >
+            <!-- profile header -->
+            <div
+              class="pl-4 bg-violet-800 rounded-xl h-14 flex items-center justify-start"
+            >
+              <h3 class="font-semibold text-violet-200 text-lg">My Profile</h3>
+            </div>
+            <!-- profile info -->
+            <div class="flex items-center justify-center p-4">
+              <!-- user pic -->
+              <img
+                class="drop-shadow-lg rounded-full w-28 h-28 object-cover mr-4"
+                src="../assets/images/christopher-campbell-rDEOVtE7vOs-unsplash.jpg"
+                alt="user pic"
+              />
+              <!-- user info -->
+              <div>
+                <h4 class="mb-1 text-lg font-medium text-violet-900">
+                  zahra sarabi
+                </h4>
+                <h5 class="text-sm text-violet-400 opacity-60">
+                  Front-end Developer
+                </h5>
+              </div>
+            </div>
+            <!-- profile icon -->
+            <div class="flex items-center justify-center m-3 divide-solid">
+              <!-- message icon -->
+              <i
+                title="message"
+                class="cursor-pointer hover:text-slate-900 text-2xl pr-4 border-violet-100 text-violet-900 fa-solid fa-message"
+              ></i>
+              <!-- alart icon -->
+              <i
+                title="alart"
+                class="cursor-pointer hover:text-slate-900 text-2xl border-l-2 border-violet-100 pl-4 pr-4 text-violet-900 fa-solid fa-bell"
+              ></i>
+              <!-- edit icon -->
+              <i
+                title="edit"
+                class="cursor-pointer hover:text-slate-900 text-2xl border-l-2 border-violet-100 pl-4 text-violet-900 fa-solid fa-pen"
+              ></i>
+            </div>
+          </div>
+          <!-- profile welcome -->
+          <div class="relative shrink bg-white w-80 h-auto rounded-2xl m-5">
+            <!-- profile welcome header -->
+            <div
+              class="pl-4 bg-violet-800 rounded-xl h-14 flex items-center justify-start"
+            >
+              <h3 class="font-semibold text-violet-200 text-lg">
+                Poyagaran Holding
+              </h3>
+            </div>
+            <!-- profile welcome body -->
+            <div class="">
+              <h4 dir="rtl" class="text-center m-8">
+                به <strong> هیواد پرواز کیش</strong> خوش آمدید!
+              </h4>
+            </div>
+          </div>
+        </div>
+        <!-- dashboard seach box -->
+        <div
+          class="relative rounded-xl w-[55rem] h-64 shrink bg-purple-400 flex-col justify-end"
+        >
+          <!-- dashboard seach box -titr &date -->
+          <div class="">
+            <h1 class="text-2xl font-bold pl-10 pt-16">Poyagaran Holding</h1>
+            <h2 class="text-sm font-normal pt-4 pl-10 text-violet-900">
+              monday , 23 April 2023
+            </h2>
+          </div>
+          <!-- travel svg  -->
+          <img
+            class="absolute bottom-0 right-4 w-64 h-64"
+            src="../assets/images/Travel insurance-rafiki.svg"
+            alt=""
+          />
+          <!-- search box -->
+          <form class="relative" action="">
+            <i
+              class="cursor-pointer bottom-3 left-[24.5rem] absolute fa-solid fa-magnifying-glass"
+            ></i>
+
+            <input
+              class="ml-10 rounded-lg border border-gray-300 focus:outline-none pl-4 bg-white w-96 h-10 mt-10 placeholder:text-sm placeholder:font-thin"
+              type="search"
+              ::-webkit-search-results-button
+              autocomplete="off"
+              name="search"
+              id="search"
+              placeholder="search"
+            />
+          </form>
+        </div>
+        <!-- menu -->
+        <div
+          class="flex flex-col items-center justify-between bg-violet-800 mr-4 w-20 rounded-3xl h-[90vh] sticky top-4"
+        >
+          <!-- pgs titr -->
+          <div class="flex flex-col">
+            <h2 class="text-violet-300 mt-4 text-center text-xl font-semibold">
+              PGS
+            </h2>
+          </div>
+          <!-- pgs options -->
+          <div>
+            <!-- home icon -->
+            <div title="home" class="relative">
+              <i
+                class="text-2xl absolute top-3 right-[0.60rem] fa-solid fa-house"
+              ></i>
+              <div class="rounded-xl h-12 w-12 mt-4 mb-8 bg-violet-300"></div>
+            </div>
+            <!-- dashboard icon -->
+            <div title="dashboard" class="relative">
+              <i
+                class="text-3xl absolute top-2.5 right-[0.65rem] fa-brands fa-slack"
+              ></i>
+              <div class="rounded-xl h-12 w-12 mb-8 mt-4 bg-violet-300"></div>
+            </div>
+            <!-- plus icon -->
+            <div class="relative">
+              <i
+                class="text-2xl absolute top-3 right-3 fa-solid fa-circle-plus"
+              ></i>
+              <div title="add reports" class="mb-8 rounded-xl h-12 w-12 mt-4 bg-violet-300"></div>
+            </div>
+            <!--  list icon -->
+            <div class="relative">
+              <i
+                class="text-2xl absolute top-3 right-[0.85rem] fa-solid fa-list"
+              ></i>
+              <div title="list of reports" class="mb-8 rounded-xl h-12 w-12 mt-4 bg-violet-300"></div>
+            </div>
+          </div>
+          <!-- pgs exit -->
+          <i
+            class="text-2xl mb-4 text-violet-300 fa-solid fa-right-from-bracket"
+          ></i>
+        </div>
+      </div>
+      <!-- dashboard body -->
+      <div>
+        <!-- creat reports -->
+        <div></div>
+        <!-- list of reports -->
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>
